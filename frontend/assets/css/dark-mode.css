@@ -1,0 +1,192 @@
+/* frontend/assets/css/dark-mode.css */
+
+/* CSS Variables for Dark Mode (overrides light-mode vars) */
+body.dark-mode {
+    --primary-color: #A3E7B2; /* Verde Claro como primario en Dark Mode para mejor contraste */
+    --secondary-color: #4CAF50; /* Verde Pasto como acento */
+    --white: #FFFFFF;
+    --background-color: #1A1A1A; /* Fondo muy oscuro */
+    --surface-color: #2C2C2C; /* Superficies (cards, forms) */
+    --text-color: #E0E0E0; /* Texto principal claro */
+    --medium-text: #B0B0B0; /* Texto secundario más claro */
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --overlay-color: rgba(0, 0, 0, 0.75); /* Más oscuro para contraste con video */
+    --header-bg: rgba(26, 26, 26, 0.95);
+    --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --header-bg-scrolled: rgba(26, 26, 26, 0.98); /* Oscurecer header al scroll en dark mode */
+    --header-shadow-scrolled: 0 2px 20px rgba(0, 0, 0, 0.6);
+    --section-bg-primary: var(--background-color);
+    --section-bg-secondary: var(--surface-color);
+    --card-bg: var(--surface-color);
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --input-bg: #444444;
+    --input-border: #666666;
+    --footer-bg: var(--secondary-color); /* Usar verde claro para el footer en modo oscuro */
+    --footer-text-color: var(--dark-text); /* Texto oscuro sobre el verde claro del footer */
+    --social-link-color: var(--dark-text); /* Color del texto de enlaces sociales en modo oscuro */
+}
+
+body.dark-mode {
+    color: var(--text-color);
+}
+
+/* Header specific dark mode styles */
+body.dark-mode .logo-text,
+body.dark-mode .nav-link,
+body.dark-mode .btn-outline,
+body.dark-mode .theme-toggle,
+body.dark-mode .mobile-menu-toggle span,
+body.dark-mode .hero-title,
+body.dark-mode .hero-subtitle,
+body.dark-mode .section-title,
+body.dark-mode .service-title,
+body.dark-mode .contact-details h3,
+body.dark-mode .auth-title,
+body.dark-mode .dashboard-title,
+body.dark-mode .card-title,
+body.dark-mode .action-title,
+body.dark-mode .activity-title,
+body.dark-mode .info-value,
+body.dark-mode .user-welcome {
+    color: var(--text-color); /* Generalmente el texto claro */
+}
+
+body.dark-mode .logo-subtitle,
+body.dark-mode .nav-link:hover, /* Cambiado para que el hover se vea bien en dark mode */
+body.dark-mode .btn-outline:hover,
+body.dark-mode .btn-primary,
+body.dark-mode .service-icon,
+body.dark-mode .contact-icon,
+body.dark-mode .social-link,
+body.dark-mode .profile-card .card-title, /* Titles inside cards */
+body.dark-mode .quick-action-item .action-icon,
+body.dark-mode .activity-item .activity-icon {
+    color: var(--primary-color); /* Verde claro para acentos y elementos interactivos */
+}
+
+body.dark-mode .nav-link::after {
+    background-color: var(--primary-color); /* Subrayado verde claro */
+}
+
+body.dark-mode .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode .btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color); /* El color de fondo oscuro de body.dark-mode */
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color); /* El color de fondo oscuro de body.dark-mode */
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: var(--secondary-color); /* Hover a un verde un poco más claro */
+    border-color: var(--secondary-color);
+    color: var(--dark-text); /* Texto claro sobre el botón verde claro */
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: var(--border-color);
+}
+
+/* Sections and cards backgrounds */
+body.dark-mode .section,
+body.dark-mode .section-alt,
+body.dark-mode .service-card,
+body.dark-mode .contact-form,
+body.dark-mode .contact-info,
+body.dark-mode .auth-content,
+body.dark-mode .profile-card,
+body.dark-mode .quick-actions-card,
+body.dark-mode .activity-card,
+body.dark-mode .quick-action-item,
+body.dark-mode .activity-item {
+    background-color: var(--surface-color);
+    box-shadow: var(--card-shadow);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .section-image {
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+/* Text colors in dark mode */
+body.dark-mode .section-text,
+body.dark-mode .service-description,
+body.dark-mode .contact-details p,
+body.dark-mode .auth-subtitle,
+body.dark-mode .form-label,
+body.dark-mode .checkbox-label,
+body.dark-mode .forgot-password,
+body.dark-mode .auth-footer p,
+body.dark-mode .dashboard-subtitle,
+body.dark-mode .info-label,
+body.dark-mode .action-description,
+body.dark-mode .activity-description,
+body.dark-mode .activity-date {
+    color: var(--medium-text);
+}
+
+body.dark-mode .form-input,
+body.dark-mode .form-textarea {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--dark-text);
+}
+
+body.dark-mode .form-input:focus,
+body.dark-mode .form-textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(163, 231, 178, 0.3);
+}
+
+body.dark-mode .notification-success {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+body.dark-mode .notification-error {
+    background-color: #cc0000;
+}
+
+body.dark-mode .notification-info {
+    background-color: #007bff;
+}
+
+body.dark-mode .status-approved {
+    background-color: rgba(163, 231, 178, 0.1);
+    color: var(--primary-color);
+}
+
+/* Footer in dark mode */
+body.dark-mode .footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .footer-text {
+    color: var(--footer-text-color);
+}
+
+/* Mobile menu toggle in dark mode */
+body.dark-mode .mobile-menu-toggle span {
+    background-color: var(--text-color);
+}
+body.dark-mode .contact-info {
+    background: transparent;
+    box-shadow: none;
+    border-color: transparent; /* Asegura que no tenga borde visible */
+}
+
+
+
+/* ====== PATCH (dark mode hamburger visibility) ====== */
+body.dark-mode .mobile-menu-toggle { color: var(--text-color); }

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario - F.A.N.S Cooperativa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="logo-text">F.A.N.S</span>
+                        <span class="logo-subtitle">Cooperativa</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#comunidad" class="nav-link">Comunidad</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <span class="user-welcome">Hola, <span id="userNameHeader">Usuario</span></span>
+                <button class="btn btn-outline" id="logoutBtn">Cerrar Sesión</button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Bienvenido, <span id="dashboardUserName">Usuario</span>!</h1>
+                <p class="dashboard-subtitle">Gestiona tu cuenta y accede a todos los servicios de la cooperativa.</p>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="profile-card animate-on-scroll">
+                    <h2 class="card-title">Tus Datos Personales</h2>
+                    <div class="profile-info">
+                        <div class="info-row">
+                            <div class="info-item">
+                                <span class="info-label">Nombre Completo:</span>
+                                <span class="info-value" id="fullName"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Correo Electrónico:</span>
+                                <span class="info-value" id="userEmail"></span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-item">
+                                <span class="info-label">Cédula:</span>
+                                <span class="info-value" id="userCedula"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Teléfono:</span>
+                                <span class="info-value" id="userTelefono"></span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-item">
+                                
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Estado de Cuenta:</span>
+                                <span class="info-value" id="accountStatus"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="quick-actions-card animate-on-scroll">
+                    <h2 class="card-title">Acciones Rápidas</h2>
+                    <div class="quick-actions-grid">
+                        <div class="quick-action-item">
+                            <div class="action-icon">💳</div>
+                            <h3 class="action-title">Ver Mis Pagos</h3>
+                            <p class="action-description">Consulta tu historial de pagos y próximos vencimientos.</p>
+                            <button class="btn btn-primary btn-small">Acceder</button>
+                        </div>
+                        <div class="quick-action-item">
+                            <div class="action-icon">🛠️</div>
+                            <h3 class="action-title">Enviar Reclamo</h3>
+                            <p class="action-description">Reporta incidencias o envía sugerencias a la administración.</p>
+                            <button class="btn btn-primary btn-small">Acceder</button>
+                        </div>
+                        <div class="quick-action-item">
+                            <div class="action-icon">📢</div>
+                            <h3 class="action-title">Ver Comunicados</h3>
+                            <p class="action-description">Mantente al día con las últimas noticias de la cooperativa.</p>
+                            <button class="btn btn-primary btn-small">Acceder</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card animate-on-scroll">
+                    <h2 class="card-title">Actividad Reciente</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">💳</div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">Pago Procesado</h4>
+                                <p class="activity-description">Tu pago mensual de Enero 2025 fue procesado exitosamente.</p>
+                                <span class="activity-date">Hace 2 días</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📢</div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">Nuevo Comunicado</h4>
+                                <p class="activity-description">Se publicó información sobre el mantenimiento del ascensor.</p>
+                                <span class="activity-date">Hace 5 días</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🏛️</div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">Reserva Confirmada</h4>
+                                <p class="activity-description">Tu reserva del salón de eventos para el 20 de Enero fue confirmada.</p>
+                                <span class="activity-date">Hace 1 semana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- === Registro de Horas === -->
+    <section class="section" id="horas">
+        <div class="container">
+            <h2 class="section-title">Registro de Horas</h2>
+            <form id="formHoras" class="form">
+                <div class="form-group">
+                    <label for="horaFecha">Fecha</label>
+                    <input type="date" id="horaFecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaCantidad">Cantidad (hs)</label>
+                    <input type="number" step="0.5" min="0" id="horaCantidad" placeholder="5.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaDesc">Descripción</label>
+                    <input type="text" id="horaDesc" placeholder="Ej: Jornada de limpieza">
+                </div>
+                <button type="submit" class="btn">Registrar</button>
+            </form>
+            <div id="listaHoras" class="card-list" style="margin-top:1rem;"></div>
+        </div>
+    </section>
+
+    <!-- === Comprobantes de Pago === -->
+    <section class="section" id="comprobantes">
+        <div class="container">
+            <h2 class="section-title">Comprobantes de Pago</h2>
+            <form id="formComprobante" class="form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="compTipo">Tipo</label>
+                    <input type="text" id="compTipo" placeholder="Recibo, Factura..." required>
+                </div>
+                <div class="form-group">
+                    <label for="compFecha">Fecha</label>
+                    <input type="date" id="compFecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="compMonto">Monto (opcional)</label>
+                    <input type="number" step="0.01" id="compMonto">
+                </div>
+                <div class="form-group">
+                    <label for="compArchivo">Archivo (PDF/JPG/PNG)</label>
+                    <input type="file" id="compArchivo" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+                <button type="submit" class="btn">Subir comprobante</button>
+            </form>
+            <div id="listaComprobantes" class="card-list" style="margin-top:1rem;"></div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 F.A.N.S Cooperativa de Viviendas. Todos los derechos reservados.</p>
+                <p class="footer-text">Hecho con ❤️ para la comunidad.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/hours.js"></script>
+    <script src="js/receipts.js"></script>
+</body>
+
+</html>

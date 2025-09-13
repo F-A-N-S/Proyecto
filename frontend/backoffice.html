@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Backoffice Admin - F.A.N.S Cooperativa</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/dark-mode.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <style>
+    .backoffice-section{padding:2rem 0;margin-top:80px;min-height:calc(100vh - 140px);background-color:var(--background-color)}
+    .backoffice-title{font-size:2rem;font-weight:700;margin:0 0 1rem;color:var(--primary-color)}
+    .filters-bar{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem}
+    .user-list{list-style:none;padding:0;margin:0}
+    .user-item{display:flex;justify-content:space-between;align-items:center;background:var(--section-bg-secondary);padding:1rem 1.2rem;margin:.6rem 0;border:1px solid var(--border-color);border-radius:10px}
+    .user-details{display:flex;flex-direction:column;gap:.2rem}
+    .user-name{font-weight:600}
+    .muted{opacity:.8;font-style:italic}
+    .btn-approve{background:var(--primary-color);color:#fff;border:0;border-radius:8px;padding:.5rem .9rem;cursor:pointer}
+    .btn-secondary{background:transparent;border:1px solid var(--border-color);border-radius:8px;padding:.5rem .9rem}
+  </style>
+</head>
+<body class="light-mode">
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav-brand">
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <span class="logo-text">F.A.N.S</span>
+            <span class="logo-subtitle">Admin</span>
+          </a>
+        </div>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Ir a la Web</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><span class="theme-icon">🌙</span></button>
+      </div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Usuarios pendientes -->
+  <section class="backoffice-section">
+    <div class="container">
+      <h2 class="backoffice-title">Aprobación de Usuarios Pendientes</h2>
+      <p id="usersLoading" class="muted">Cargando usuarios pendientes...</p>
+      <ul class="user-list" id="pendingUsersList"></ul>
+    </div>
+  </section>
+
+  <!-- Comprobantes (con filtros + aprobar) -->
+  <section class="backoffice-section">
+    <div class="container">
+      <div class="filters-bar">
+        <h2 class="backoffice-title" style="margin-right:auto;">Comprobantes</h2>
+
+        <label for="estadoFiltro">Estado</label>
+        <select id="estadoFiltro">
+          <option value="Todos" selected>Todos</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Aprobado">Aprobado</option>
+        </select>
+
+        <label for="residenteFiltro">Residente (ID)</label>
+        <input type="number" id="residenteFiltro" min="1" placeholder="Opcional" style="width:120px;"/>
+
+        <button id="aplicarFiltros" class="btn btn-outline">Aplicar</button>
+      </div>
+
+      <ul class="user-list" id="receiptsList"></ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">© 2025 F.A.N.S Cooperativa de Viviendas. Todos los derechos reservados.</p>
+        <p class="footer-text">Panel de Administración.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/backoffice.js"></script>
+</body>
+</html>

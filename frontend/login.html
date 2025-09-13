@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - F.A.N.S Cooperativa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="logo-text">F.A.N.S</span>
+                        <span class="logo-subtitle">Cooperativa</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#comunidad" class="nav-link">Comunidad</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <a href="register.html" class="btn btn-primary">Registrarse</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-content">
+                    <h1 class="auth-title">Bienvenido de Nuevo a F.A.N.S</h1>
+                    <p class="auth-subtitle">Ingresa tus credenciales para acceder a tu panel de control.</p>
+                    
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" id="loginEmail" name="correo" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" id="loginPassword" name="password" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="remember" name="remember">
+                                <span class="checkmark"></span>
+                                Recordarme
+                            </label>
+                            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Iniciar Sesión</button>
+                        <p id="loginMessage" class="message"></p>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>¿No tienes una cuenta? <a href="register.html" class="auth-link">Regístrate aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 F.A.N.S Cooperativa de Viviendas. Todos los derechos reservados.</p>
+                <p class="footer-text">Hecho con ❤️ para la comunidad.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

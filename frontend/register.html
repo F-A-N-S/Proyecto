@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - F.A.N.S Cooperativa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="logo-text">F.A.N.S</span>
+                        <span class="logo-subtitle">Cooperativa</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#comunidad" class="nav-link">Comunidad</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <a href="login.html" class="btn btn-outline">Iniciar Sesión</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-content">
+                    <h1 class="auth-title">Crear Tu Cuenta en F.A.N.S</h1>
+                    <p class="auth-subtitle">Únete a nuestra comunidad y comienza a gestionar tu hogar.</p>
+                    
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre" class="form-label">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido" class="form-label">Apellido *</label>
+                                <input type="text" id="apellido" name="apellido" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="correo" class="form-label">Correo Electrónico *</label>
+                            <input type="email" id="correo" name="correo" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password" class="form-label">Contraseña *</label>
+                                <input type="password" id="password" name="password" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password" class="form-label">Confirmar Contraseña *</label>
+                                <input type="password" id="confirm_password" name="confirm_password" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fecha_ingreso" class="form-label">Fecha de Ingreso *</label>
+                            <input type="date" id="fecha_ingreso" name="fecha_ingreso" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cedula" class="form-label">Cédula</label>
+                                <input type="text" id="cedula" name="cedula" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" class="form-input">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Registrarse</button>
+                        <p id="registerMessage" class="message"></p>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>¿Ya tienes una cuenta? <a href="login.html" class="auth-link">Inicia Sesión aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 F.A.N.S Cooperativa de Viviendas. Todos los derechos reservados.</p>
+                <p class="footer-text">Hecho con ❤️ para la comunidad.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

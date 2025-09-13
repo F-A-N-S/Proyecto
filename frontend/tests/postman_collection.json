@@ -1,0 +1,145 @@
+{
+  "info": {
+    "name": "FANS Cooperativa – API 2ª Entrega",
+    "_postman_id": "fans-coop",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}?action=register",
+          "host": [
+            "{{base}}"
+          ],
+          "query": [
+            {
+              "key": "action",
+              "value": "register"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nombre\": \"Ana\", \"apellido\": \"Garc\\u00eda\", \"cedula\": \"1\", \"correo\": \"ana@example.com\", \"telefono\": \"091\", \"fecha_ingreso\": \"2025-08-01\", \"password\": \"Password123\"}"
+        }
+      }
+    },
+    {
+      "name": "Pending Users",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base}}?action=pending_users"
+        }
+      }
+    },
+    {
+      "name": "Approve User",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "{{base}}?action=approve_user&id=1"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}?action=login"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"correo\": \"ana@example.com\", \"password\": \"Password123\"}"
+        }
+      }
+    },
+    {
+      "name": "Add Hour",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}?action=add_hour"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id_residente\": 1, \"fecha\": \"2025-08-10\", \"cantidad\": 2.0, \"descripcion\": \"Limpieza\"}"
+        }
+      }
+    },
+    {
+      "name": "List Hours",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base}}?action=list_hours&id_residente=1"
+        }
+      }
+    },
+    {
+      "name": "Upload Receipt",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{base}}?action=upload_receipt"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "List Receipts (Pending)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base}}?action=list_receipts&estado=Pendiente"
+        }
+      }
+    },
+    {
+      "name": "Approve Receipt",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "{{base}}?action=approve_receipt&id=1"
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://localhost/fans-cooperativa/frontend/api/api.php"
+    }
+  ]
+}

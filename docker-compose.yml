@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fans_cooperativa
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./BaseDatos/DDL.txt:/docker-entrypoint-initdb.d/01_ddl.sql:ro
+      - ./BaseDatos/fans_cooperativa.sql:/docker-entrypoint-initdb.d/02_dump.sql:ro
+
+  web:
+    image: php:8.2-apache
+    working_dir: /var/www/html
+    volumes:
+      - ./frontend:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    # Habilitar extensiones necesarias
+    environment:
+      PHP_ERRORS: 1
+
+volumes:
+  db_data:

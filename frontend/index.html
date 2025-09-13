@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.A.N.S | Tu Cooperativa de Viviendas</title> <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="light-mode">
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="logo-text">F.A.N.S</span>
+                        <span class="logo-subtitle">Cooperativa de Viviendas</span> </a>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li> <li><a href="#comunidad" class="nav-link">Comunidad</a></li> <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <a href="login.html" class="btn btn-outline">Iniciar Sesión</a>
+                <a href="register.html" class="btn btn-primary">Registrarse</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source src="assets/video/fans-video.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title animate-on-scroll">Tu Hogar, Nuestra Comunidad.</h1> <p class="hero-subtitle animate-on-scroll">Gestiona tu vida en la cooperativa con F.A.N.S: Facilidad, Amistad, Novedad, Seguridad.</p> <a href="#nosotros" class="btn btn-primary btn-large animate-on-scroll">Descubre Más</a> </div>
+        </div>
+    </section>
+
+    <section class="section" id="nosotros">
+        <div class="container">
+            <div class="section-content">
+                <div class="text-content animate-on-scroll">
+                    <h2 class="section-title">¿Quiénes Somos en F.A.N.S?</h2> <p class="section-text">En F.A.N.S, somos una cooperativa de viviendas dedicada a construir comunidades sólidas y a facilitar la vida de nuestros socios. Creemos en la convivencia armónica, la transparencia y el bienestar colectivo como pilares fundamentales de un verdadero hogar.</p> <p class="section-text">Desde nuestra fundación, nos hemos comprometido a ofrecer soluciones habitacionales de calidad y a gestionar los recursos de manera eficiente, siempre pensando en el crecimiento y la estabilidad de cada familia que forma parte de nuestra comunidad.</p> <p class="section-text">Nuestra plataforma web y herramientas digitales están diseñadas para que la gestión de tu hogar y tu participación en la cooperativa sean sencillas y accesibles. En F.A.N.S, no solo adquieres una vivienda, te unes a una familia.</p> </div>
+                <div class="image-content animate-on-scroll">
+                    <img src="assets/img/about-fans.jpg" alt="Comunidad F.A.N.S" class="section-image"> </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="servicios">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Nuestros Servicios Clave</h2> <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">💳</div>
+                    <h3 class="service-title">Gestión de Pagos</h3>
+                    <p class="service-description">Simplifica tus pagos mensuales de cuotas y servicios con nuestro sistema automatizado. Recibe recordatorios, consulta tu historial y gestiona tus finanzas al día de manera eficiente.</p> </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">📢</div>
+                    <h3 class="service-title">Comunicados Oficiales</h3>
+                    <p class="service-description">Mantente informado con todas las noticias y avisos importantes de la cooperativa. Recibe notificaciones en tiempo real sobre decisiones, eventos y cambios relevantes.</p> </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🛠️</div>
+                    <h3 class="service-title">Reclamos y Sugerencias</h3>
+                    <p class="service-description">Tu voz importa. Utiliza nuestro sistema integrado para reportar incidencias, hacer sugerencias o solicitar mantenimiento. Daremos seguimiento a tus solicitudes con respuestas rápidas y efectivas.</p> </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🏛️</div>
+                    <h3 class="service-title">Reservas de Áreas Comunes</h3>
+                    <p class="service-description">Automatiza la gestión de espacios compartidos como salones de eventos, parrilleros o canchas. Consulta la disponibilidad y realiza tus reservas online de manera intuitiva.</p> </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">👥</div>
+                    <h3 class="service-title">Directorio de Socios</h3>
+                    <p class="service-description">Un directorio seguro y actualizado de todos los miembros de la cooperativa. Facilita la interacción entre vecinos y fortalece los lazos comunitarios de forma controlada.</p> </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">📋</div>
+                    <h3 class="service-title">Acceso a Documentación</h3>
+                    <p class="service-description">Centraliza todos los documentos importantes de la cooperativa: estatutos, reglamentos, actas de reuniones y contratos. Acceso seguro y organizado para todos los socios.</p> </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="comunidad">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="image-content animate-on-scroll">
+                    <img src="assets/img/fans-img-2.jpg" alt="Comunidad Cooperativa" class="section-image"> </div>
+                <div class="text-content animate-on-scroll">
+                    <h2 class="section-title">F.A.N.S: Una Comunidad en Crecimiento</h2> <p class="section-text">En F.A.N.S, creemos firmemente que una comunidad fuerte se construye día a día, con la participación activa de cada uno de sus miembros. Somos más que vecinos; somos una familia extendida que comparte sueños, celebra logros y se apoya en los momentos difíciles.</p> <p class="section-text">Nuestros eventos comunitarios, programas de integración y espacios de encuentro están diseñados para fortalecer los lazos entre residentes. Desde talleres educativos hasta celebraciones familiares, cada actividad está pensada para crear memorias duraderas.</p> <p class="section-text">Únete a nosotros y descubre lo que significa ser parte de una comunidad que valora la amistad, promueve la innovación y garantiza la seguridad de todos sus miembros.</p> <a href="register.html" class="btn btn-primary">Forma Parte de F.A.N.S</a> </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="contacto">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-form animate-on-scroll">
+                    <form class="form" id="contactForm"> 
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>Nuestra Sede</h3> <p>Av. Principal 123, Edificio Central<br>Ciudad, País 12345</p> </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>Atención al Socio</h3> <p>+1 (555) 123-4567</p> </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Correo Electrónico</h3> <p>info@fans-cooperativa.com</p> </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                        <div class="contact-details social-details">
+                            <h3>Síguenos</h3> <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 F.A.N.S Cooperativa de Viviendas. Todos los derechos reservados.</p> <p class="footer-text">Juntos construimos el futuro de nuestro hogar.</p> </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
