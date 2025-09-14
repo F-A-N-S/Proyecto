@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ./scripts/colorcitos.sh
-source ./scripts/paquetes.sh
-source ./scripts/firewall.sh
-source ./scripts/usuarios.sh
+source colorcitos.sh
+source paquetes.sh
+source firewall.sh
+source usuarios.sh
+sudo bash ssh_config_setup.sh
